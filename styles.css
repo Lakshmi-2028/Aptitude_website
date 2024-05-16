@@ -18,6 +18,34 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 48px; /* Increased font size for emphasis */
+    color: #000000; /* Black color */
+    text-shadow: 0 0 10px #000000, 0 0 20px #000000; /* Black glow */
+    background-image: linear-gradient(to right, #000000, #000000); /* Gradient background */
+    -webkit-background-clip: text; /* Clip text to background gradient */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Hide original text color */
+    animation: glow 2s infinite alternate; /* Glow animation */
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #3c3c3c, 0 0 20px #434343;
+    }
+    to {
+        text-shadow: 0 0 20px #000000, 0 0 30px #000000;
+    }
 }
 
 /* Heading styles */
@@ -33,12 +61,23 @@ h1, h2 {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.video-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .video-container video {
     width: 100%;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.video-container video.loaded {
+    opacity: 1;
 }
 
 .video-container video:hover {
@@ -78,7 +117,7 @@ h1, h2 {
     font-size: 18px;
     margin-top: 10px;
     text-align: center;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     padding: 10px;
     background-color: #f8f9fa;
     border-radius: 8px;
@@ -88,6 +127,8 @@ h1, h2 {
 .suggested-videos a:hover {
     color: #007bff;
     background-color: #e9ecef;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
 .suggested-videos a img {
@@ -112,15 +153,7 @@ h1, h2 {
     filter: brightness(90%);
 }
 
-/* Hover effect for video titles */
+/* Text Shadow Effect for Titles */
 .suggested-videos a {
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
-
-.suggested-videos a:hover {
-    color: #007bff;
-    background-color: #e9ecef;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
-}
-
