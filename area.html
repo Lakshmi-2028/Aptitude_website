@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">
+            <h2>1. What is the area of a rectangle with a length of 10 cm and a width of 6 cm?</h2>
+            <button onclick="toggleExplanation(1)">Show Explanation</button>
+            <p class="explanation">The area of a rectangle is calculated by multiplying its length by its width. So, the area of this rectangle is 10 cm * 6 cm = 60 square centimeters.</p>
+        </div>
+        
+        <div class="question">
+            <h2>2. Find the area of a square with a side length of 5 meters.</h2>
+            <button onclick="toggleExplanation(2)">Show Explanation</button>
+            <p class="explanation">The area of a square is calculated by squaring its side length. So, the area of this square is 5 meters * 5 meters = 25 square meters.</p>
+        </div>
+        
+        <div class="question">
+            <h2>3. Calculate the area of a triangle with a base of 8 inches and a height of 6 inches.</h2>
+            <button onclick="toggleExplanation(3)">Show Explanation</button>
+            <p class="explanation">The area of a triangle is calculated by multiplying its base by its height and dividing by 2. So, the area of this triangle is (8 inches * 6 inches) / 2 = 24 square inches.</p>
+        </div>
+        
+        <div class="question">
+            <h2>4. Determine the area of a circle with a radius of 4 centimeters. (Use π ≈ 3.14)</h2>
+            <button onclick="toggleExplanation(4)">Show Explanation</button>
+            <p class="explanation">The area of a circle is calculated by squaring its radius and multiplying by π. So, the area of this circle is (4 cm)^2 * π ≈ 3.14 * 16 cm² ≈ 50.24 square centimeters.</p>
+        </div>
+        
+        <div class="question">
+            <h2>5. Find the area of a trapezoid with bases of lengths 5 cm and 8 cm and a height of 6 cm.</h2>
+            <button onclick="toggleExplanation(5)">Show Explanation</button>
+            <p class="explanation">The area of a trapezoid is calculated by multiplying the sum of its bases by its height and dividing by 2. So, the area of this trapezoid is ((5 cm + 8 cm) * 6 cm) / 2 = 39 square centimeters.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleExplanation(questionNumber) {
+            var explanation = document.getElementsByClassName('explanation')[questionNumber - 1];
+            if (explanation.style.display === "none") {
+                explanation.style.display = "block";
+            } else {
+                explanation.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

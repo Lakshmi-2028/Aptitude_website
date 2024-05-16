@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">
+            <h2>1. What day of the week was January 1, 2023?</h2>
+            <button onclick="toggleExplanation(1)">Show Explanation</button>
+            <p class="explanation">To find the day of the week for January 1, 2023, we can use the Zeller's Congruence algorithm or consult a calendar. January 1, 2023, falls on a Sunday.</p>
+        </div>
+        
+        <div class="question">
+            <h2>2. How many days are there in a leap year?</h2>
+            <button onclick="toggleExplanation(2)">Show Explanation</button>
+            <p class="explanation">A leap year has 366 days. It occurs every four years, except for years that are divisible by 100 but not by 400.</p>
+        </div>
+        
+        <div class="question">
+            <h2>3. If today is Monday, what day of the week will it be 200 days from now?</h2>
+            <button onclick="toggleExplanation(3)">Show Explanation</button>
+            <p class="explanation">There are 7 days in a week, so adding 200 days to Monday results in (200 % 7) = 2 extra days. Therefore, 200 days from Monday will be Wednesday.</p>
+        </div>
+        
+        <div class="question">
+            <h2>4. How many months have 31 days?</h2>
+            <button onclick="toggleExplanation(4)">Show Explanation</button>
+            <p class="explanation">There are 7 months in a year that have 31 days: January, March, May, July, August, October, and December.</p>
+        </div>
+        
+        <div class="question">
+            <h2>5. In which month does the vernal equinox occur?</h2>
+            <button onclick="toggleExplanation(5)">Show Explanation</button>
+            <p class="explanation">The vernal equinox, marking the beginning of spring in the Northern Hemisphere, occurs in March.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleExplanation(questionNumber) {
+            var explanation = document.getElementsByClassName('explanation')[questionNumber - 1];
+            if (explanation.style.display === "none") {
+                explanation.style.display = "block";
+            } else {
+                explanation.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

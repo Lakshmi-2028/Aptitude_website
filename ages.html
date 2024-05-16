@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">
+            <h2>1. Mary is 5 years older than John. If John is 10 years old, how old is Mary?</h2>
+            <button onclick="toggleExplanation(1)">Show Explanation</button>
+            <p class="explanation">If John is 10 years old, then Mary is 10 + 5 = 15 years old.</p>
+        </div>
+        
+        <div class="question">
+            <h2>2. The sum of the ages of Peter and Jane is 45 years. If Peter is 10 years older than Jane, how old is Peter?</h2>
+            <button onclick="toggleExplanation(2)">Show Explanation</button>
+            <p class="explanation">Let Jane's age be x years. Then, Peter's age is x + 10 years. According to the given information, x + (x + 10) = 45. Solving this equation, we find x = 17. Therefore, Peter is 17 + 10 = 27 years old.</p>
+        </div>
+        
+        <div class="question">
+            <h2>3. Tom is three times as old as Jerry. If Jerry is 10 years old, how old is Tom?</h2>
+            <button onclick="toggleExplanation(3)">Show Explanation</button>
+            <p class="explanation">If Jerry is 10 years old, then Tom is 3 * 10 = 30 years old.</p>
+        </div>
+        
+        <div class="question">
+            <h2>4. Alice is twice as old as Bob. If the sum of their ages is 36 years, how old is Alice?</h2>
+            <button onclick="toggleExplanation(4)">Show Explanation</button>
+            <p class="explanation">Let Bob's age be x years. Then, Alice's age is 2x years. According to the given information, x + 2x = 36. Solving this equation, we find x = 12. Therefore, Alice is 2 * 12 = 24 years old.</p>
+        </div>
+        
+        <div class="question">
+            <h2>5. Jack is 5 years older than Jill. If the sum of their ages is 25 years, how old is Jill?</h2>
+            <button onclick="toggleExplanation(5)">Show Explanation</button>
+            <p class="explanation">Let Jill's age be x years. Then, Jack's age is x + 5 years. According to the given information, x + (x + 5) = 25. Solving this equation, we find x = 10. Therefore, Jill is 10 years old.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleExplanation(questionNumber) {
+            var explanation = document.getElementsByClassName('explanation')[questionNumber - 1];
+            if (explanation.style.display === "none") {
+                explanation.style.display = "block";
+            } else {
+                explanation.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

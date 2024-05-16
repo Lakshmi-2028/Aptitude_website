@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">
+            <h2>1. If a car travels 120 miles in 2 hours, what is its average speed in miles per hour?</h2>
+            <button onclick="toggleExplanation(1)">Show Explanation</button>
+            <p class="explanation">Average speed is calculated by dividing the total distance traveled by the total time taken. So, 120 miles / 2 hours = 60 mph.</p>
+        </div>
+        
+        <div class="question">
+            <h2>2. If a book originally costs $50 and is on sale for 20% off, what is the sale price of the book?</h2>
+            <button onclick="toggleExplanation(2)">Show Explanation</button>
+            <p class="explanation">To find the sale price, we first calculate the discount: 20% of $50 = $10. Then, subtract the discount from the original price: $50 - $10 = $40.</p>
+        </div>
+        
+        <div class="question">
+            <h2>3. If 3x - 5 = 7, what is the value of x?</h2>
+            <button onclick="toggleExplanation(3)">Show Explanation</button>
+            <p class="explanation">To find the value of x, we isolate it by moving the constant term to the other side of the equation: 3x = 7 + 5 = 12. Then, divide both sides by 3 to solve for x: x = 12 / 3 = 4.</p>
+        </div>
+        
+        <div class="question">
+            <h2>4. If a rectangle has a length of 8 cm and a width of 4 cm, what is its area?</h2>
+            <button onclick="toggleExplanation(4)">Show Explanation</button>
+            <p class="explanation">The area of a rectangle is calculated by multiplying its length by its width. So, 8 cm * 4 cm = 32 cm².</p>
+        </div>
+        
+        <div class="question">
+            <h2>5. If a triangle has sides of lengths 5 cm, 7 cm, and 9 cm, what type of triangle is it?</h2>
+            <button onclick="toggleExplanation(5)">Show Explanation</button>
+            <p class="explanation">In a triangle, if all three sides have different lengths, it is called a scalene triangle.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleExplanation(questionNumber) {
+            var explanation = document.getElementsByClassName('explanation')[questionNumber - 1];
+            if (explanation.style.display === "none") {
+                explanation.style.display = "block";
+            } else {
+                explanation.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

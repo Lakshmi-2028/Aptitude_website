@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    width: 150px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  
+  .active {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  
+  #hero {
+    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.6)), url('hero_background.jpg') center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  #about {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+  }
+  
+  .feature {
+    text-align: center;
+  }
+  
+  .feature h2 {
+    color: #007bff;
+  }
+  
+  .feature p {
+    color: #444;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  /* Your existing CSS styles here */
+
+#testimonials {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+  }
+  
+  #testimonials .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .testimonial {
+    width: 45%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .testimonial p {
+    margin-bottom: 10px;
+  }
+  
+  #popular-topics {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+  }
+  
+  #popular-topics ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #popular-topics ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  #cta {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  #cta h2 {
+    margin-bottom: 20px;
+  }
+  
+  #cta button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #cta button:hover {
+    background-color: #0056b3;
+  }
+/* Your existing CSS styles here */
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #0056b3;
+    font-size: 40px;
+    color: #fff;
+  }
+  
+  #hero {
+    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.6)), url('hero_background.jpg') center/cover;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  #hero .highlight {
+    display: inline-block;
+    font-size:70px;
+ /* Highlight color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow with contrasting color */
+    animation: rotateText 5s linear infinite;
+    color: #ffcc00; /* Change to your desired highlight color */
+  }
+  
+  #hero p {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+/* Your existing CSS styles here */
+
+#hero .highlight {
+    display: inline-block;
+    animation: rotateText 5s linear infinite;
+  }
+  
+  @keyframes rotateText {
+    0% { transform: rotateY(0deg); }
+    25% { transform: rotateY(90deg); }
+    50% { transform: rotateY(180deg); }
+    75% { transform: rotateY(270deg); }
+    100% { transform: rotateY(360deg); }
+  }
+      
+  

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aptitude Video Tutorials</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Aptitude Video Tutorials</h1>
+    <div id="video-container" class="video-container">
+        <video id="main-video" width="560" height="315" controls poster="hcf.jpeg" playsinline webkit-playsinline>
+          <source src="Video2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>      
+    <div class="suggested-videos">
+        <h2>Suggested Videos</h2>
+        <ul>
+          <li>
+            <a href="Video1.mp4" onclick="changeVideo('Video1.mp4', 'hcf1.jpeg', 'Video Title 1')"> <!-- Update these values with appropriate video and thumbnail -->
+              <img src="hcf.jpeg" alt="Video Thumbnail 1">
+              Video Title 1
+            </a>
+          </li>
+          <li>
+            <a href="Video2.mp4" onclick="changeVideo('Video2.mp4', 'hcf2.jpeg', 'Video Title 2')"> <!-- Update these values with appropriate video and thumbnail -->
+              <img src="hcf.jpeg" alt="Video Thumbnail 2">
+              Video Title 2
+            </a>
+          </li>
+          <li>
+            <a href="Video3.mp4" onclick="changeVideo('Video3.mp4', 'hcf3.jpeg', 'Video Title 3')"> <!-- Update these values with appropriate video and thumbnail -->
+              <img src="hcf.jpeg" alt="Video Thumbnail 3">
+              Video Title 3
+            </a>
+          </li>
+          <li>
+            <a href="Video2.mp4" onclick="changeVideo('Video4.mp4', 'hcf4.jpeg', 'Video Title 4')"> <!-- Update these values with appropriate video and thumbnail -->
+              <img src="hcf.jpeg" alt="Video Thumbnail 4">
+              Video Title 4
+            </a>
+          </li>
+          <li>
+            <a href="Video1.mp4" onclick="changeVideo('Video1.mp4', 'hcf1.jpeg', 'Video Title 1')"> <!-- Update these values with appropriate video and thumbnail -->
+              <img src="hcf.jpeg" alt="Video Thumbnail 1">
+              Video Title 1
+            </a>
+          </li>
+          <li>
+            <a href="Video1.mp4" onclick="changeVideo('Video1.mp4', 'hcf1.jpeg', 'Video Title 1')"> <!-- Update these values with appropriate video and thumbnail -->
+              <img src="hcf.jpeg" alt="Video Thumbnail 1">
+              Video Title 1
+            </a>
+          </li>
+          <!-- Add more suggested videos as needed -->
+        </ul>
+      </div>
+      
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

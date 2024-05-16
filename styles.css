@@ -1,0 +1,126 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heading styles */
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Video container styles */
+.video-container {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-container video:hover {
+    transform: scale(1.02);
+}
+
+/* Suggested videos section styles */
+.suggested-videos {
+    margin-top: 30px;
+}
+
+.suggested-videos h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.suggested-videos ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none; 
+}
+
+.suggested-videos li {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+/* Video thumbnail and title styles */
+.suggested-videos a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.suggested-videos a:hover {
+    color: #007bff;
+    background-color: #e9ecef;
+}
+
+.suggested-videos a img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.suggested-videos a:hover img {
+    transform: scale(1.05);
+}
+
+/* Hover effect for video thumbnails */
+.suggested-videos img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.suggested-videos img:hover {
+    transform: scale(1.05);
+    filter: brightness(90%);
+}
+
+/* Hover effect for video titles */
+.suggested-videos a {
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.suggested-videos a:hover {
+    color: #007bff;
+    background-color: #e9ecef;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+

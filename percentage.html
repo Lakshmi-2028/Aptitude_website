@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">
+            <h2>1. If 20% of a number is 50, what is the number?</h2>
+            <button onclick="toggleExplanation(1)">Show Explanation</button>
+            <p class="explanation">To find the number, we divide 50 by 20% (or 0.20), which gives us 250.</p>
+        </div>
+        
+        <div class="question">
+            <h2>2. If a shirt originally costs $40 and is discounted by 25%, what is the sale price?</h2>
+            <button onclick="toggleExplanation(2)">Show Explanation</button>
+            <p class="explanation">To find the sale price, we first calculate the discount: 25% of $40 = $10. Then, subtract the discount from the original price: $40 - $10 = $30.</p>
+        </div>
+        
+        <div class="question">
+            <h2>3. If a student scores 75 out of 100 in a test, what is the percentage score?</h2>
+            <button onclick="toggleExplanation(3)">Show Explanation</button>
+            <p class="explanation">To find the percentage score, we divide 75 by 100 and multiply by 100 to get 75%.</p>
+        </div>
+        
+        <div class="question">
+            <h2>4. If the population of a city increased from 500,000 to 600,000, what is the percentage increase?</h2>
+            <button onclick="toggleExplanation(4)">Show Explanation</button>
+            <p class="explanation">To find the percentage increase, we first calculate the difference: 600,000 - 500,000 = 100,000. Then, divide the difference by the original population (500,000) and multiply by 100 to get a 20% increase.</p>
+        </div>
+        
+        <div class="question">
+            <h2>5. If a company's revenue increased from $1,000,000 to $1,500,000, what is the percentage increase?</h2>
+            <button onclick="toggleExplanation(5)">Show Explanation</button>
+            <p class="explanation">To find the percentage increase, we first calculate the difference: $1,500,000 - $1,000,000 = $500,000. Then, divide the difference by the original revenue ($1,000,000) and multiply by 100 to get a 50% increase.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleExplanation(questionNumber) {
+            var explanation = document.getElementsByClassName('explanation')[questionNumber - 1];
+            if (explanation.style.display === "none") {
+                explanation.style.display = "block";
+            } else {
+                explanation.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

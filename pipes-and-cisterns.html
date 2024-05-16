@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">
+            <h2>1. Pipe A can fill a tank in 6 hours, while Pipe B can empty the tank in 4 hours. If both pipes are opened simultaneously, how long will it take to fill the tank?</h2>
+            <button onclick="toggleExplanation(1)">Show Explanation</button>
+            <p class="explanation">To find the time to fill the tank, we calculate the net flow rate: 1/6 - 1/4 = 1/12 (tanks per hour). Therefore, it will take 12 hours to fill the tank.</p>
+        </div>
+        
+        <div class="question">
+            <h2>2. Pipe C can fill a tank in 8 hours. If it is opened for 2 hours and then closed, and then Pipe D is opened, which can empty the tank in 10 hours, how long will it take to empty the tank?</h2>
+            <button onclick="toggleExplanation(2)">Show Explanation</button>
+            <p class="explanation">In 2 hours, Pipe C fills 1/8 * 2 = 1/4 of the tank. When Pipe D is opened, the net flow rate is -1/10 (emptying). So, it takes (1/4) / (1/10) = 2.5 hours to empty the tank.</p>
+        </div>
+        
+        <div class="question">
+            <h2>3. Pipe X can fill a tank in 10 hours. If it is opened for 2 hours and then closed, and then Pipe Y is opened, which can empty the tank in 8 hours, how long will it take to fill the tank?</h2>
+            <button onclick="toggleExplanation(3)">Show Explanation</button>
+            <p class="explanation">In 2 hours, Pipe X fills 1/10 * 2 = 1/5 of the tank. When Pipe Y is opened, the net flow rate is -1/8 (emptying). So, it takes (1/5) / (1/8) = 8/5 hours to fill the tank.</p>
+        </div>
+        
+        <div class="question">
+            <h2>4. Pipe A can fill a tank in 4 hours, while Pipe B can empty the tank in 6 hours. If both pipes are opened simultaneously, how long will it take to empty the tank?</h2>
+            <button onclick="toggleExplanation(4)">Show Explanation</button>
+            <p class="explanation">To find the time to empty the tank, we calculate the net flow rate: 1/4 - 1/6 = 1/12 (tanks per hour). Therefore, it will take 12 hours to empty the tank.</p>
+        </div>
+        
+        <div class="question">
+            <h2>5. Pipe M can fill a tank in 12 hours, while Pipe N can fill the same tank in 18 hours. If both pipes are opened simultaneously, how long will it take to fill the tank?</h2>
+            <button onclick="toggleExplanation(5)">Show Explanation</button>
+            <p class="explanation">To find the time to fill the tank, we calculate the net flow rate: 1/12 + 1/18 = 5/36 (tanks per hour). Therefore, it will take 36/5 hours to fill the tank.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleExplanation(questionNumber) {
+            var explanation = document.getElementsByClassName('explanation')[questionNumber - 1];
+            if (explanation.style.display === "none") {
+                explanation.style.display = "block";
+            } else {
+                explanation.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

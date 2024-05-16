@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">
+            <h2>1. A mixture contains alcohol and water in the ratio 3:5. If 8 liters of water are added to the mixture, the ratio becomes 3:4. How much alcohol was initially present in the mixture?</h2>
+            <button onclick="toggleExplanation(1)">Show Explanation</button>
+            <p class="explanation">Let the initial quantity of alcohol be 3x and the initial quantity of water be 5x. After adding 8 liters of water, the quantity of water becomes 5x + 8. According to the given condition, (3x) / (5x + 8) = 3/4. Solving this equation, we find x = 8. Therefore, the initial quantity of alcohol was 3 * 8 = 24 liters.</p>
+        </div>
+        
+        <div class="question">
+            <h2>2. A container contains a mixture of milk and water in the ratio 5:3. If 20 liters of water is added to the container, the ratio becomes 5:4. How much milk was initially present in the container?</h2>
+            <button onclick="toggleExplanation(2)">Show Explanation</button>
+            <p class="explanation">Let the initial quantity of milk be 5x and the initial quantity of water be 3x. After adding 20 liters of water, the quantity of water becomes 3x + 20. According to the given condition, (5x) / (3x + 20) = 5/4. Solving this equation, we find x = 20. Therefore, the initial quantity of milk was 5 * 20 = 100 liters.</p>
+        </div>
+        
+        <div class="question">
+            <h2>3. A mixture of milk and water contains 40% water. If 10 liters of water is added to the mixture, the percentage of water becomes 50%. What was the initial quantity of the mixture?</h2>
+            <button onclick="toggleExplanation(3)">Show Explanation</button>
+            <p class="explanation">Let the initial quantity of the mixture be x liters. Since the mixture contains 40% water initially, the quantity of water is 0.4x liters. After adding 10 liters of water, the quantity of water becomes 0.4x + 10 liters. According to the given condition, (0.4x + 10) / x = 50/100. Solving this equation, we find x = 20. Therefore, the initial quantity of the mixture was 20 liters.</p>
+        </div>
+        
+        <div class="question">
+            <h2>4. A container contains a mixture of sugar and salt in the ratio 2:3. If 5 kg of salt is added to the container, the ratio becomes 2:5. What is the initial quantity of the mixture?</h2>
+            <button onclick="toggleExplanation(4)">Show Explanation</button>
+            <p class="explanation">Let the initial quantity of sugar be 2x kg and the initial quantity of salt be 3x kg. After adding 5 kg of salt, the quantity of salt becomes 3x + 5. According to the given condition, (2x) / (3x + 5) = 2/5. Solving this equation, we find x = 5. Therefore, the initial quantity of the mixture was 2 * 5 + 3 * 5 = 25 kg.</p>
+        </div>
+        
+        <div class="question">
+            <h2>5. A mixture of two liquids A and B contains 40% of liquid A. If 4 liters of liquid B is added to the mixture, the percentage of liquid A becomes 30%. How much of liquid A was initially present in the mixture?</h2>
+            <button onclick="toggleExplanation(5)">Show Explanation</button>
+            <p class="explanation">Let the initial quantity of the mixture be x liters. Since the mixture contains 40% of liquid A initially, the quantity of liquid A is 0.4x liters. After adding 4 liters of liquid B, the quantity of liquid A remains the same, but the total quantity of the mixture becomes x + 4 liters. According to the given condition, 0.4x / (x + 4) = 30/100. Solving this equation, we find x = 20. Therefore, the initial quantity of liquid A was 0.4 * 20 = 8 liters.</p>
+            </div>
+            </body>
+
+</html>

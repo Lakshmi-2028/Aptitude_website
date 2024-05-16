@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quiz-container">
+        <div class="question">
+            <h2>1. A shopkeeper sells an item for $3200, making a profit of 20%. What is the cost price of the item?</h2>
+            <button onclick="toggleExplanation(1)">Show Explanation</button>
+            <p class="explanation">Let the cost price be x. The selling price is 120% of x. So, 120% of x = $3200. Solving for x, we find the cost price is $2666.67.</p>
+        </div>
+        
+        <div class="question">
+            <h2>2. If a company's expenses are $5000 and its revenue is $7500, what is the profit percentage?</h2>
+            <button onclick="toggleExplanation(2)">Show Explanation</button>
+            <p class="explanation">Profit = Revenue - Expenses = $7500 - $5000 = $2500. Profit percentage = (Profit / Expenses) * 100% = (2500 / 5000) * 100% = 50%.</p>
+        </div>
+        
+        <div class="question">
+            <h2>3. A bike is bought for $1500 and sold for $1800. What is the profit percentage?</h2>
+            <button onclick="toggleExplanation(3)">Show Explanation</button>
+            <p class="explanation">Profit = Selling Price - Cost Price = $1800 - $1500 = $300. Profit percentage = (Profit / Cost Price) * 100% = (300 / 1500) * 100% = 20%.</p>
+        </div>
+        
+        <div class="question">
+            <h2>4. A book is sold for $90, making a loss of 10%. What was the cost price of the book?</h2>
+            <button onclick="toggleExplanation(4)">Show Explanation</button>
+            <p class="explanation">Let the cost price be x. The selling price is 90% of x. So, 90% of x = $90. Solving for x, we find the cost price is $100.</p>
+        </div>
+        
+        <div class="question">
+            <h2>5. If a product is sold for $1200 with a 20% profit, what was the cost price of the product?</h2>
+            <button onclick="toggleExplanation(5)">Show Explanation</button>
+            <p class="explanation">Let the cost price be x. The selling price is 120% of x. So, 120% of x = $1200. Solving for x, we find the cost price is $1000.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleExplanation(questionNumber) {
+            var explanation = document.getElementsByClassName('explanation')[questionNumber - 1];
+            if (explanation.style.display === "none") {
+                explanation.style.display = "block";
+            } else {
+                explanation.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">
+            <h2>1. The average of five numbers is 20. If one of the numbers is 15, what is the average of the remaining four numbers?</h2>
+            <button onclick="toggleExplanation(1)">Show Explanation</button>
+            <p class="explanation">The sum of the five numbers is 5 * 20 = 100. If one of the numbers is 15, then the sum of the remaining four numbers is 100 - 15 = 85. Therefore, the average of the remaining four numbers is 85 / 4 = 21.25.</p>
+        </div>
+        
+        <div class="question">
+            <h2>2. The average of six numbers is 18. If one of the numbers is 24, what is the average of the remaining five numbers?</h2>
+            <button onclick="toggleExplanation(2)">Show Explanation</button>
+            <p class="explanation">The sum of the six numbers is 6 * 18 = 108. If one of the numbers is 24, then the sum of the remaining five numbers is 108 - 24 = 84. Therefore, the average of the remaining five numbers is 84 / 5 = 16.8.</p>
+        </div>
+        
+        <div class="question">
+            <h2>3. The average age of a group of ten friends is 25 years. If the age of one of the friends is 30 years, what is the average age of the remaining nine friends?</h2>
+            <button onclick="toggleExplanation(3)">Show Explanation</button>
+            <p class="explanation">The sum of the ages of the ten friends is 10 * 25 = 250 years. If one of the friends is 30 years old, then the sum of the ages of the remaining nine friends is 250 - 30 = 220 years. Therefore, the average age of the remaining nine friends is 220 / 9 ≈ 24.44 years.</p>
+        </div>
+        
+        <div class="question">
+            <h2>4. The average weight of four boxes is 12 kg. If one of the boxes weighs 16 kg, what is the average weight of the remaining three boxes?</h2>
+            <button onclick="toggleExplanation(4)">Show Explanation</button>
+            <p class="explanation">The sum of the weights of the four boxes is 4 * 12 kg = 48 kg. If one of the boxes weighs 16 kg, then the sum of the weights of the remaining three boxes is 48 kg - 16 kg = 32 kg. Therefore, the average weight of the remaining three boxes is 32 kg / 3 ≈ 10.67 kg.</p>
+        </div>
+        
+        <div class="question">
+            <h2>5. The average score of a student in four tests is 80. If the student scores 90 in the fifth test, what is the new average score?</h2>
+            <button onclick="toggleExplanation(5)">Show Explanation</button>
+            <p class="explanation">The sum of the scores of the four tests is 4 * 80 = 320. If the student scores 90 in the fifth test, then the new sum of scores is 320 + 90 = 410. Therefore, the new average score is 410 / 5 = 82.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleExplanation(questionNumber) {
+            var explanation = document.getElementsByClassName('explanation')[questionNumber - 1];
+            if (explanation.style.display === "none") {
+                explanation.style.display = "block";
+            } else {
+                explanation.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

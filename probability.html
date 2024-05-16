@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">
+            <h2>1. If a fair six-sided die is rolled, what is the probability of getting an even number?</h2>
+            <button onclick="toggleExplanation(1)">Show Explanation</button>
+            <p class="explanation">Out of 6 possible outcomes, 3 are even numbers (2, 4, and 6). So, the probability is 3/6 = 1/2.</p>
+        </div>
+        
+        <div class="question">
+            <h2>2. In a standard deck of 52 playing cards, what is the probability of drawing a heart?</h2>
+            <button onclick="toggleExplanation(2)">Show Explanation</button>
+            <p class="explanation">There are 13 hearts in a deck of 52 cards. So, the probability is 13/52 = 1/4.</p>
+        </div>
+        
+        <div class="question">
+            <h2>3. If a bag contains 4 red balls and 6 blue balls, what is the probability of randomly selecting a red ball?</h2>
+            <button onclick="toggleExplanation(3)">Show Explanation</button>
+            <p class="explanation">Out of 10 balls, 4 are red. So, the probability is 4/10 = 2/5.</p>
+        </div>
+        
+        <div class="question">
+            <h2>4. If two dice are rolled simultaneously, what is the probability of getting a sum of 7?</h2>
+            <button onclick="toggleExplanation(4)">Show Explanation</button>
+            <p class="explanation">There are 36 possible outcomes when rolling two dice. Out of these, 6 outcomes result in a sum of 7 (1+6, 2+5, 3+4, 4+3, 5+2, 6+1). So, the probability is 6/36 = 1/6.</p>
+        </div>
+        
+        <div class="question">
+            <h2>5. If a jar contains 20 marbles, 5 of which are green, 8 are red, and 7 are blue, what is the probability of randomly selecting a red marble?</h2>
+            <button onclick="toggleExplanation(5)">Show Explanation</button>
+            <p class="explanation">Out of 20 marbles, 8 are red. So, the probability is 8/20 = 2/5.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleExplanation(questionNumber) {
+            var explanation = document.getElementsByClassName('explanation')[questionNumber - 1];
+            if (explanation.style.display === "none") {
+                explanation.style.display = "block";
+            } else {
+                explanation.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
